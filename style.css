@@ -1,1 +1,43 @@
-font-family: 'Sentient', serif;
+
+
+/*font-family: 'Sentient', serif;*/
+body {
+    margin: 0;
+}
+
+.first-image {
+    position: absolute;
+}
+
+.about-card {
+    position: absolute;
+}
+
+
+
+.svg-trio {
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+
+}
+
+@media (min-width: 768px) {
+    .first-image {
+        width: clamp(2.5rem, 37vw, 25rem);
+        height: clamp(3rem, 40vw, 30rem);
+        object-fit: cover;
+        right: 28rem;
+        top: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+}
