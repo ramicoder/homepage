@@ -1,43 +1,84 @@
 
 
-/*font-family: 'Sentient', serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
     margin: 0;
+
+}
+
+.diagonal {
+    background-color: #0798b3;
+    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+    transform: rotate(180deg);
+    height: 70vh;
+    width: 100%;
+}
+
+.top-container {
+    position: absolute;
+    right: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .first-image {
-    position: absolute;
+    background-image: url("./images/grinding.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: -3px 3px 20px #1a1a1a,
+        3px -3px 20px #1a1a1a;
 }
 
 .about-card {
-    position: absolute;
+    background-color: #f3ecec;
+    box-shadow: 3px 3px 20px #0c0c0c,
+        0 -3px 20px #0c0c0c;
+
 }
-
-
 
 .svg-trio {
-    height: 100px;
-    width: 100px;
+    display: flex;
 }
 
-
-
-
+h1 {
+    font-family: "Playfair Display", serif;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: lighter;
+}
 
 @media (max-width: 600px) {
 
 }
 
-@media (min-width: 768px) {
-    .first-image {
-        width: clamp(2.5rem, 37vw, 25rem);
-        height: clamp(3rem, 40vw, 30rem);
-        object-fit: cover;
-        right: 28rem;
-        top: 3rem;
-    }
+@media (max-width: 1199px) {
+
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
+    .top-container {
+        left: 5rem;
+        top: 4rem;
+    }
 
+    .first-image {
+        width: clamp(12rem, 38vw, 32rem);
+        height: clamp(14rem, 41vw, 35rem);
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: clamp(1rem, 5.5vw, 3rem);
+        position: absolute;
+        top: clamp(25.5rem, 27vw, 29rem);
+        left: clamp(7rem, 8vw, 8rem);
+    }
+
+    .about-card {
+        height: clamp(26rem, 34vw, 30rem);
+        width: clamp(37.5rem,54vw, 65rem);
+        margin-top: 50px;
+    }
 }
