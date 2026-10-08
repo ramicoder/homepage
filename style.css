@@ -5,11 +5,11 @@
 
 body {
     margin: 0;
-
+    overflow-x: hidden;
 }
 
 .diagonal {
-    background-color: #0798b3;
+    background-color: #0380a6;
     clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
     transform: rotate(180deg);
     height: 70vh;
@@ -35,18 +35,103 @@ body {
     background-color: #f3ecec;
     box-shadow: 3px 3px 20px #0c0c0c,
         0 -3px 20px #0c0c0c;
-
-}
-
-.svg-trio {
     display: flex;
+    flex-direction: column;
 }
 
-h1 {
+.svg-duo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1, h2 {
     font-family: "Playfair Display", serif;
     color: #FFFFFF;
     font-style: italic;
     font-weight: lighter;
+}
+
+h2 {
+    color: #000000;
+    font-style: normal;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    color: #414143
+}
+
+.mid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: clamp(2rem, 3vw, 4rem);
+}
+
+.project-card {
+    box-shadow: -1px 1px 10px #1a1a1a,
+    1px -1px 10px #1a1a1a;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+
+.card-img {
+    object-fit: contain;
+    object-position: center;
+}
+
+.bg-1 {
+    background-size: cover;
+    background-position: top;
+    background-image: url("./images/project1.png");
+}
+.bg-2 {
+    background-size: contain;
+    background-position: center;
+    background-image: url("./images/project2.png");
+}
+.bg-3 {
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/project3.png");
+}
+.bg-4 {
+    background-size: cover;
+    background-position: center;
+    background-image: url("./images/project4.png");
+}
+.bg-5 {
+    background-size: cover;
+    background-repeat:  no-repeat;
+    background-position: top;
+    background-image: url("./images/project5.png");
+}
+.bg-6 {
+    background-size: cover;
+    background-position: left;
+    background-image: url("./images/project6.png");
+}
+
+.project-title {
+    padding: 1rem;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-container {
+    background-color: #0380a6;
+    display: flex;
+}
+
+.bottom-left-content {
+
 }
 
 @media (max-width: 600px) {
@@ -66,19 +151,119 @@ h1 {
     .first-image {
         width: clamp(12rem, 38vw, 32rem);
         height: clamp(14rem, 41vw, 35rem);
-        object-fit: cover;
     }
 
     h1 {
-        font-size: clamp(1rem, 5.5vw, 3rem);
+        font-size: clamp(1.5rem, 5vw, 3rem);
         position: absolute;
-        top: clamp(25.5rem, 27vw, 29rem);
+        top: clamp(24.5rem, 27vw, 29rem);
         left: clamp(7rem, 8vw, 8rem);
+    }
+
+    h2 {
+        font-size: clamp(1rem, 4vw, 2.5rem);
+        padding: clamp(1rem, 2vw, 3.5rem);
     }
 
     .about-card {
         height: clamp(26rem, 34vw, 30rem);
-        width: clamp(37.5rem,54vw, 65rem);
+        width: clamp(37.5rem, 54vw, 65rem);
         margin-top: 50px;
+    }
+
+    .about-card>p {
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        margin: auto;
+        margin-left: clamp(0.8rem, 1.8vw, 1.9rem);
+        width: clamp(30rem, 45vw, 60rem);
+    }
+
+    .svg-duo {
+        margin: 2rem 6rem 1rem 0;
+        gap: 1rem;
+    }
+
+    .svg-duo>a {
+        width: 100%;
+        height: auto;
+        max-width: 40px;
+    }
+
+    .myWork-header {
+        margin-top: 4.5rem;
+        margin-left: 80px;
+        padding: 0;
+    }
+
+    .mid-container {
+        margin-left: 80px;
+        width: clamp(48.5rem, 88vw, 90rem);
+        margin-right: 80px;
+    }
+
+    .project-card {
+        height: 27rem;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 59%;
+        border-bottom: 2px solid #606060;
+    }
+
+    .project-title>a {
+        width: 100%;
+        height: auto;
+        max-width: 24px;
+        margin-top: 5px;
+    }
+
+    .project-title>span {
+        font-family: "playfair Display", serif;
+        font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    }
+
+    .project-info>p{
+        font-size: clamp(0.3rem, 1vw, 1rem);
+        width: clamp(13rem, 25vw, 25rem);
+        margin: auto;
+        margin-left: 18px;
+        height: clamp(8rem, 10vw, 14rem);
+        overflow: clip;
+    }
+
+    .bottom-container {
+        margin-top: 120px;
+        height: 60vh;
+    }
+
+    .bottom-left-content {
+        margin-left: 80px;
+    }
+
+    .bottom-left-content>h2 {
+        color: white;
+        padding: 0;
+        margin-top: 80px;
+    }
+
+    .bottom-image {
+        height: clamp(450px, 30% ,550px);
+        width: clamp(650px, 35% , 650px);
+        margin-top: 65px;
+        margin-right: 80px;
+        margin-left: clamp(50px, 6%, 100px);
+        background-image: url("./images/smiling.jpg");
+        background-size: cover;
+        background-position: 10% 25%;
+    }
+
+    .bottom-left-content>span {
+        display: inline-block;
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        font-family: "Roboto", sans-serif;
+        color: white;
+        line-height: 1.5;
     }
 }
