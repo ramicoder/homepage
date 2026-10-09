@@ -62,9 +62,13 @@ p {
     color: #414143
 }
 
+span {
+    font-family: "Roboto", sans-serif;
+}
+
 .mid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     gap: clamp(2rem, 3vw, 4rem);
 }
 
@@ -130,8 +134,18 @@ p {
     display: flex;
 }
 
-.bottom-left-content {
+.svg-text {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
 
+}
+
+.bottom-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @media (max-width: 600px) {
@@ -197,8 +211,8 @@ p {
 
     .mid-container {
         margin-left: 80px;
-        width: clamp(48.5rem, 88vw, 90rem);
         margin-right: 80px;
+        width: auto;
     }
 
     .project-card {
@@ -238,6 +252,9 @@ p {
     }
 
     .bottom-left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         margin-left: 80px;
     }
 
@@ -249,10 +266,10 @@ p {
 
     .bottom-image {
         height: clamp(450px, 30% ,550px);
-        width: clamp(650px, 35% , 650px);
+        width: clamp(650px, 45% , 750px);
         margin-top: 65px;
         margin-right: 80px;
-        margin-left: clamp(50px, 6%, 100px);
+        margin-left: auto;
         background-image: url("./images/smiling.jpg");
         background-size: cover;
         background-position: 10% 25%;
@@ -266,4 +283,39 @@ p {
         color: white;
         line-height: 1.5;
     }
+
+    .svg-text>svg {
+        margin-top: 1rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    .svg-text>span {
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        margin-top: 1rem;
+    }
+
+}
+
+@media (min-width: 2000px) {
+
+    .diagonal {
+        height: 50vh;
+    }
+
+    .mid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: clamp(2rem, 3vw, 4rem);
+    }
+
+    .project-info>p {
+        width: clamp(10rem, 20vw, 20rem);
+        margin: auto;
+        margin-left: 18px;
+        height: clamp(9rem, 12vw, 15rem);
+        overflow: scroll;
+    }
+
 }
