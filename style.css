@@ -29,6 +29,10 @@ body {
     background-position: center;
     box-shadow: -3px 3px 20px #1a1a1a,
         3px -3px 20px #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
 }
 
 .about-card {
@@ -147,11 +151,177 @@ span {
     align-items: flex-start;
 }
 
+h1 {
+    position: relative;
+}
+
 @media (max-width: 600px) {
 
 }
 
 @media (max-width: 1199px) {
+    .top-container {
+        left: 3%;
+        top: 3rem;
+        display: block;
+        z-index: 10;
+    }
+
+    .first-image {
+        width: 47vw;
+        height: 52vh;
+        z-index: 2;
+        float: left;
+        position: relative;
+        margin-right: 2rem;
+    }
+
+    h1 {
+        font-size: clamp(3rem, 7vw, 5rem);
+        position: absolute;
+        bottom: 70%;
+        left: 87%;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: clamp(1rem, 4vw, 2.5rem);
+        padding: clamp(1rem, 2vw, 3.5rem);
+    }
+
+    .about-card {
+        height: 60vh;
+        width: 80vw;
+        margin-top: 8rem;
+        z-index: 1;
+        display: block;
+        position: static;
+        padding: 10px;
+        margin-left: 80px;
+    }
+
+    .about-card>h2 {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        margin-left: 46vw;
+    }
+
+    .about-card>p {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        width: auto;
+    }
+
+    .svg-duo {
+        margin: 2rem 6rem 1rem 0;
+        gap: 1rem;
+    }
+
+    .svg-duo>a {
+        width: 100%;
+        height: auto;
+        max-width: 40px;
+    }
+
+    .myWork-header {
+        margin-top: 14.5rem;
+        margin-left: 80px;
+        padding: 0;
+    }
+
+    .mid-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin-left: 80px;
+        margin-right: 80px;
+        width: auto;
+    }
+
+    .project-card {
+        height: 27rem;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 59%;
+        border-bottom: 2px solid #606060;
+    }
+
+    .project-title>a {
+        width: 100%;
+        height: auto;
+        max-width: 24px;
+        margin-top: 5px;
+    }
+
+    .project-title>span {
+        font-family: "playfair Display", serif;
+        font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    }
+
+    .project-info>p{
+        font-size: clamp(0.3rem, 1vw, 1rem);
+        width: clamp(13rem, 25vw, 25rem);
+        margin: auto;
+        margin-left: 18px;
+        height: clamp(8rem, 10vw, 14rem);
+        overflow: clip;
+    }
+
+    .bottom-container {
+        margin-top: 120px;
+        height: 60vh;
+    }
+
+    .bottom-left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 80px;
+    }
+
+    .bottom-left-content>h2 {
+        color: white;
+        padding: 0;
+        margin-top: 80px;
+    }
+
+    .bottom-image {
+        height: clamp(450px, 30% ,550px);
+        width: clamp(650px, 45% , 750px);
+        margin-top: 65px;
+        margin-right: 80px;
+        margin-left: auto;
+        background-image: url("./images/smiling.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bottom-left-content>span {
+        display: inline-block;
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        font-family: "Roboto", sans-serif;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .svg-text>svg {
+        margin-top: 1rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    .svg-text>span {
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        margin-top: 1rem;
+    }
+
+
+
+
+
+
+
+
 
 }
 
@@ -162,15 +332,16 @@ span {
     }
 
     .first-image {
-        width: clamp(12rem, 38vw, 32rem);
-        height: clamp(14rem, 41vw, 35rem);
+        width: 38vw;
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
     }
 
     h1 {
         font-size: clamp(1.5rem, 5vw, 3rem);
-        position: absolute;
-        top: clamp(24.5rem, 27vw, 29rem);
-        left: clamp(7rem, 8vw, 8rem);
     }
 
     h2 {
@@ -179,9 +350,9 @@ span {
     }
 
     .about-card {
-        height: clamp(26rem, 34vw, 30rem);
-        width: clamp(37.5rem, 54vw, 65rem);
-        margin-top: 50px;
+        height: 47vh;
+        width: 53vw;
+        margin-top: 30px;
     }
 
     .about-card>p {
