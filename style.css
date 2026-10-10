@@ -25,7 +25,7 @@ body {
 }
 
 .first-image {
-    background-image: url("./images/grinding.jpg");
+    background-image: url("./images/riding.jpg");
     background-size: cover;
     background-position: center;
     box-shadow: -3px 3px 20px #1a1a1a,
@@ -304,7 +304,6 @@ h1 {
     .bottom-left-content>.svg-duo>a {
         max-width: 45px;
     }
-
 }
 
 @media (min-width: 1550px) {
@@ -679,9 +678,14 @@ h1 {
 }
 
 @media (max-width: 440px) {
+    .about-card {
+        margin-top: 10rem;
+    }
+
     .project-info>p {
         width: 60vw;
     }
+
     .project-title>span {
         font-size: clamp(0.4rem, 4.5vw, 1.4rem);
     }
