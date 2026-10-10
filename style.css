@@ -6,6 +6,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    min-height: 100dvh;
 }
 
 .diagonal {
@@ -41,6 +42,7 @@ body {
         0 -3px 20px #0c0c0c;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-in-out;
 }
 
 .svg-duo {
@@ -86,6 +88,9 @@ span {
     transform: scale(1.02);
 }
 
+.about-card:hover {
+    transform: scale(1.02);
+}
 
 .card-img {
     object-fit: contain;
@@ -155,176 +160,6 @@ h1 {
     position: relative;
 }
 
-@media (max-width: 600px) {
-
-}
-
-@media (max-width: 1199px) {
-    .top-container {
-        left: 3%;
-        top: 3rem;
-        display: block;
-        z-index: 10;
-    }
-
-    .first-image {
-        width: 47vw;
-        height: 52vh;
-        z-index: 2;
-        float: left;
-        position: relative;
-        margin-right: 2rem;
-    }
-
-    h1 {
-        font-size: clamp(3rem, 7vw, 5rem);
-        position: absolute;
-        bottom: 70%;
-        left: 87%;
-        width: 100%;
-    }
-
-    h2 {
-        font-size: clamp(1rem, 4vw, 2.5rem);
-        padding: clamp(1rem, 2vw, 3.5rem);
-    }
-
-    .about-card {
-        height: 60vh;
-        width: 80vw;
-        margin-top: 8rem;
-        z-index: 1;
-        display: block;
-        position: static;
-        padding: 10px;
-        margin-left: 80px;
-    }
-
-    .about-card>h2 {
-        font-size: clamp(1.5rem, 5vw, 3rem);
-        margin-left: 46vw;
-    }
-
-    .about-card>p {
-        font-size: clamp(1.4rem, 2vw, 2rem);
-        width: auto;
-    }
-
-    .svg-duo {
-        margin: 2rem 6rem 1rem 0;
-        gap: 1rem;
-    }
-
-    .svg-duo>a {
-        width: 100%;
-        height: auto;
-        max-width: 40px;
-    }
-
-    .myWork-header {
-        margin-top: 14.5rem;
-        margin-left: 80px;
-        padding: 0;
-    }
-
-    .mid-container {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        margin-left: 80px;
-        margin-right: 80px;
-        width: auto;
-    }
-
-    .project-card {
-        height: 27rem;
-    }
-
-    .image-container {
-        width: 100%;
-        height: 59%;
-        border-bottom: 2px solid #606060;
-    }
-
-    .project-title>a {
-        width: 100%;
-        height: auto;
-        max-width: 24px;
-        margin-top: 5px;
-    }
-
-    .project-title>span {
-        font-family: "playfair Display", serif;
-        font-size: clamp(0.5rem, 1.5vw, 1.5rem);
-    }
-
-    .project-info>p{
-        font-size: clamp(0.3rem, 1vw, 1rem);
-        width: clamp(13rem, 25vw, 25rem);
-        margin: auto;
-        margin-left: 18px;
-        height: clamp(8rem, 10vw, 14rem);
-        overflow: clip;
-    }
-
-    .bottom-container {
-        margin-top: 120px;
-        height: 60vh;
-    }
-
-    .bottom-left-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 80px;
-    }
-
-    .bottom-left-content>h2 {
-        color: white;
-        padding: 0;
-        margin-top: 80px;
-    }
-
-    .bottom-image {
-        height: clamp(450px, 30% ,550px);
-        width: clamp(650px, 45% , 750px);
-        margin-top: 65px;
-        margin-right: 80px;
-        margin-left: auto;
-        background-image: url("./images/smiling.jpg");
-        background-size: cover;
-        background-position: center;
-    }
-
-    .bottom-left-content>span {
-        display: inline-block;
-        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
-        width: clamp(13rem, 25vw, 25rem);
-        font-family: "Roboto", sans-serif;
-        color: white;
-        line-height: 1.5;
-    }
-
-    .svg-text>svg {
-        margin-top: 1rem;
-        width: 20px;
-        height: 20px;
-    }
-
-    .svg-text>span {
-        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
-        width: clamp(13rem, 25vw, 25rem);
-        margin-top: 1rem;
-    }
-
-
-
-
-
-
-
-
-
-}
-
 @media (min-width: 1200px) {
     .top-container {
         left: 5rem;
@@ -337,7 +172,6 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: end;
-
     }
 
     h1 {
@@ -410,10 +244,10 @@ h1 {
 
     .project-info>p{
         font-size: clamp(0.3rem, 1vw, 1rem);
-        width: clamp(13rem, 25vw, 25rem);
+        width: clamp(14rem, 25vw, 25rem);
         margin: auto;
         margin-left: 18px;
-        height: clamp(8rem, 10vw, 14rem);
+        height: clamp(8rem, 8vw, 14rem);
         overflow: clip;
     }
 
@@ -457,14 +291,18 @@ h1 {
 
     .svg-text>svg {
         margin-top: 1rem;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 
     .svg-text>span {
         font-size: clamp(0.4rem, 1.4vw, 1.4rem);
         width: clamp(13rem, 25vw, 25rem);
         margin-top: 1rem;
+    }
+
+    .bottom-left-content>.svg-duo>a {
+        max-width: 45px;
     }
 
 }
@@ -478,10 +316,378 @@ h1 {
     }
 
     .project-info>p {
-        width: clamp(10rem, 20vw, 20rem);
-        margin: auto;
-        margin-left: 18px;
+        width: clamp(14rem, 25vw, 25rem);
+        margin: auto auto auto 18px;
         height: clamp(9rem, 12vw, 15rem);
         overflow: scroll;
     }
+
+}
+
+@media (max-width: 1199px) {
+    .top-container {
+        left: 3%;
+        top: 3rem;
+        display: block;
+        z-index: 10;
+    }
+
+    .first-image {
+        width: 50vw;
+        height: 47vh;
+        z-index: 2;
+        float: left;
+        position: relative;
+        margin-right: 2rem;
+    }
+
+    h1 {
+        font-size: clamp(3rem, 7vw, 5rem);
+        position: absolute;
+        bottom: 70%;
+        left: 87%;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: clamp(1rem, 4vw, 2.5rem);
+        padding: clamp(1rem, 2vw, 3.5rem);
+    }
+
+    .about-card {
+        height: 50vh;
+        width: 80vw;
+        margin-top: 8rem;
+        z-index: 1;
+        display: block;
+        position: relative;
+        padding: 10px 10px 4rem 10px;
+        margin-left: 60px;
+    }
+
+    .about-card>h2 {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        margin-left: 46vw;
+    }
+
+    .about-card>p {
+        font-size: clamp(1.4rem, 2.2vw, 2rem);
+        width: auto;
+    }
+
+    .svg-duo {
+        margin: 4rem 6rem 1rem 0;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .svg-duo>a {
+        width: 100%;
+        height: auto;
+        max-width: 40px;
+    }
+
+    .about-card>.svg-duo {
+        align-items: flex-end;
+        margin-top: -0.5vh;
+    }
+
+    .myWork-header {
+        margin-top: 14.5rem;
+        margin-left: 80px;
+        padding: 0;
+    }
+
+    .mid-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin-left: 80px;
+        margin-right: 80px;
+        width: auto;
+    }
+
+    .project-card {
+        height: 27rem;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 59%;
+        border-bottom: 2px solid #606060;
+    }
+
+    .project-title>a {
+        width: 100%;
+        height: auto;
+        max-width: 24px;
+        margin-top: 5px;
+    }
+
+    .project-title>span {
+        font-family: "playfair Display", serif;
+        font-size: clamp(1.2rem, 2vw, 2.5rem);
+    }
+
+    .project-info>p{
+        font-size: clamp(0.8rem, 1.5vw, 2rem);
+        width: clamp(13rem, 34vw, 25rem);
+        margin: auto;
+        margin-left: 18px;
+        height: clamp(8rem, 10vw, 14rem);
+        overflow: clip;
+
+    }
+
+    .bottom-container {
+        margin-top: 120px;
+        height: 60vh;
+    }
+
+    .bottom-left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 80px;
+    }
+
+    .bottom-left-content>h2 {
+        color: white;
+        padding: 0;
+        margin-top: 80px;
+    }
+
+    .bottom-image {
+        height: clamp(450px, 30% ,550px);
+        width: clamp(650px, 45% , 750px);
+        margin-top: 65px;
+        margin-right: 80px;
+        margin-left: auto;
+        background-image: url("./images/smiling.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bottom-left-content>span {
+        display: inline-block;
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        font-family: "Roboto", sans-serif;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .svg-text>svg {
+        margin-top: 1rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    .svg-text>span {
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 832px) {
+
+    .project-info > p {
+        width: 70vw;
+    }
+
+    .about-card > .svg-duo {
+        margin-top: -0.5vh;
+    }
+
+    .about-card>p {
+        font-size: clamp(1.35rem, 2vw, 1.9rem);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .top-container {
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        z-index: 0;
+        height: 100%;
+        margin-top: 7rem;
+    }
+
+    .first-image {
+        width: 85vw;
+        height: 60vh;
+        text-align: center;
+        margin-right: 50px;
+        margin-left: 50px;
+        position: absolute;
+        top: 2rem;
+        background-position: 75% 25%;
+    }
+
+    h1 {
+        font-size: clamp(3rem, 7vw, 5rem);
+        position: static;
+    }
+
+    h2 {
+        font-size: clamp(1rem, 4vw, 2.5rem);
+        padding: clamp(1rem, 2vw, 3.5rem);
+    }
+
+    .about-card {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        text-align: center;
+        margin-left: 0;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        height: 10vh;
+    }
+
+    .about-card:hover {
+        transform: scale(1);
+    }
+
+    .about-card>h2 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-left: 0;
+    }
+
+    .about-card>p {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+        width: auto;
+    }
+
+    .svg-duo {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .myWork-header {
+        margin-top: 25.5rem;
+        margin-left: 50px;
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .mid-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .project-card {
+        height: 40rem;
+    }
+
+    .project-title>a {
+        max-width: 30px;
+    }
+
+    .project-title>span {
+        font-size: clamp(1.5rem, 4.5vw, 3.5rem);
+        margin-top: 20px;
+    }
+
+    .project-info>p{
+        margin-top: 20px;
+        font-size: clamp(1rem, 2.5vw, 2.5rem);
+        width: clamp(20rem, 70vw, 30rem);
+        margin-left: 18px;
+        height: clamp(8rem, 10vw, 16rem);
+        overflow: clip;
+
+    }
+
+    .bottom-container {
+        margin-top: 120px;
+        min-height: 100vh;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .bottom-left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    .bottom-left-content>h2 {
+        margin-top: 40px;
+        font-size: clamp(3rem, 6vw, 4rem);
+        margin-left: 25vw;
+    }
+
+    .bottom-image {
+        height: 60vh;
+        width: 100vw;
+        background-image: url("./images/smiling.jpg");
+        background-size: cover;
+        background-position: 50% 25%;
+    }
+
+    .bottom-left-content>span {
+        display: inline-block;
+        font-size: clamp(0.4rem, 1.4vw, 1.4rem);
+        width: clamp(13rem, 25vw, 25rem);
+        font-family: "Roboto", sans-serif;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .svg-text {
+        width: clamp(13rem, 25vw, 25rem);
+        margin: 0;
+    }
+
+    .svg-text>span {
+        font-size: 18px;
+        margin-left: 15vw;
+    }
+
+    #first-span {
+        font-size: 25px;
+        width: 70vw;
+        margin: 0 0 0 15vw;
+    }
+
+    #second-span {
+        font-size: 18px;
+        width: 65vw;
+        align-self: center;
+        margin-right: 5vw;
+        margin-bottom: 1rem;
+    }
+
+    .svg-text>svg {
+        display: none;
+    }
+
+    .bottom-left-content>.svg-duo {
+        margin: 5vw 0 0 40vw;
+    }
+
+    #email {
+        margin-top: -0.5rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .project-info>p {
+        width: 60vw;
+    }
+    .project-title>span {
+        font-size: clamp(0.4rem, 4.5vw, 1.4rem);
+    }
+
+    .project-title {
+        align-items: center;
+    }
+
 }
